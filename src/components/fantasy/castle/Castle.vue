@@ -2,10 +2,14 @@
   <div class="castle">
     <TopSide :title="leftTitle"></TopSide>
     <TopMid :title="midTitle"></TopMid>
-    <Left></Left>
-    <Right></Right>
-    <MapHeat></MapHeat>
-    <Foot></Foot>
+    <div class="left">
+      <clusteringOfTopics></clusteringOfTopics>
+      <hotTopics></hotTopics>
+    </div>
+    <div class="right">
+      <wordCloud></wordCloud>
+      <websiteList></websiteList>
+    </div>
   </div>
 </template>
 <script>
@@ -13,8 +17,11 @@ import TopSide from '../../common/TopSide'
 import TopMid from '../../common/TopMid'
 import Left from './Left'
 import Right from './Right'
-import Foot from './Foot'
-import MapHeat from './MapHeat'
+import ClusteringOfTopics from './ClusteringOfTopics'
+import HotTopics from './HotTopics'
+import WordCloud from './WordCloud'
+import WebsiteList from './WebsiteList'
+
 export default {
   name: 'Castle',
   data () {
@@ -26,10 +33,10 @@ export default {
   components: {
     TopSide,
     TopMid,
-    Left,
-    Right,
-    // Foot,
-    // MapHeat
+    ClusteringOfTopics,
+    HotTopics,
+    WordCloud,
+    WebsiteList,
   }
 }
 </script>
