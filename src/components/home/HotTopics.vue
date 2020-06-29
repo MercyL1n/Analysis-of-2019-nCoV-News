@@ -18,6 +18,6 @@ export default {
     left: 60px;
     width: 680px;
     height: 600px;
-    background: url(../../../assets/images/common/tip-title-bg.png) no-repeat top left;
+    background: url(../../assets/images/common/tip-title-bg.png) no-repeat top left;
   }
 </style>

@@ -36,7 +36,7 @@ export default {
     right: 70px;
     width: 35%;
     height: 690px;
-    background: url(../../../assets/images/common/tip-title-bg.png) no-repeat top left;
+    background: url(../../assets/images/common/tip-title-bg.png) no-repeat top left;
   }
   .websiteList ul {
     position: relative;

@@ -1,5 +1,5 @@
 <template>
-  <div class="castle">
+  <div class="Home">
     <TopSide :title="leftTitle"></TopSide>
     <TopMid :title="midTitle"></TopMid>
     <div class="left">
@@ -13,15 +13,15 @@
   </div>
 </template>
 <script>
-import TopSide from '../../common/TopSide'
-import TopMid from '../../common/TopMid'
+import TopSide from '../common/TopSide'
+import TopMid from '../common/TopMid'
 import ClusteringOfTopics from './ClusteringOfTopics'
 import HotTopics from './HotTopics'
 import WordCloud from './WordCloud'
 import WebsiteList from './WebsiteList'
 
 export default {
-  name: 'Castle',
+  name: 'Home',
   data () {
     return {
       leftTitle: 'SCSS',

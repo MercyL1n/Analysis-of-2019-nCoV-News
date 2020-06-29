@@ -8,24 +8,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/components/Layout'
-import Castle from '@/components/fantasy/castle/Castle'
-import Fireworks from '@/components/stride/fireworks/Fireworks'
-import Sailor from '@/components/excleamation/sailor/Sailor'
+import Home from '@/components/home/Home'
 Vue.use(Router)
 export default new Router({
   routes: [{
     path: '/',
+    // component: Layout,
+    // redirect: 'fantasy/castle',
+    // children: [{
+    //   path: 'fantasy/castle',
+    //   component: Castle
+    // }]
     component: Layout,
-    redirect: 'fantasy/castle',
+    redirect: 'home',
     children: [{
-      path: 'fantasy/castle',
-      component: Castle
-    }, {
-      path: 'stride/fireworks',
-      component: Fireworks
-    }, {
-      path: 'excleamation/sailor',
-      component: Sailor
+      path: 'home',
+      component: Home
     }]
   }]
 })
