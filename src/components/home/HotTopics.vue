@@ -14,7 +14,7 @@ export default {
 <style>
   .hotTopics {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 60px;
     width: 680px;
     height: 600px;

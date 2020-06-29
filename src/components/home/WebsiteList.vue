@@ -32,7 +32,7 @@ export default {
 <style>
   .websiteList {
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 70px;
     width: 35%;
     height: 690px;
