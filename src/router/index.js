@@ -13,12 +13,6 @@ Vue.use(Router)
 export default new Router({
   routes: [{
     path: '/',
-    // component: Layout,
-    // redirect: 'fantasy/castle',
-    // children: [{
-    //   path: 'fantasy/castle',
-    //   component: Castle
-    // }]
     component: Layout,
     redirect: 'home',
     children: [{

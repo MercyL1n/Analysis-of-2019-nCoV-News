@@ -15,7 +15,7 @@ export default {
   .hotTopics {
     position: absolute;
     top: 55%;
-    left: 60px;
+    left: 170px;
     width: 680px;
     height: 600px;
     background: url(../../assets/images/common/tip-title-bg.png) no-repeat top left;

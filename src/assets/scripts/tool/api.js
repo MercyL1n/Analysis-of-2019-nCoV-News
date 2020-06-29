@@ -16,5 +16,6 @@ export default {
   district: onlineApiHost + 'stride/fireworks/city',
   list: onlineApiHost + 'stride/fireworks/list',
   dotemap: onlineApiHost + 'fantasy/castle/dotemap',
-  wordCloud: onlineApiHost + 'wordCloud'
+  wordCloud: onlineApiHost + 'wordCloud',
+  clusteringOfTopics: onlineApiHost + 'clusteringOfTopics'
 }
