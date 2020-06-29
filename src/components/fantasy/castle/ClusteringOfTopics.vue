@@ -6,10 +6,8 @@
 
 <script>
 export default {
-  name: 'clusteringOfTopics', 
-  data() {
-    
-  }
+  name: 'clusteringOfTopics',
+  data () {}
 }
 </script>
 

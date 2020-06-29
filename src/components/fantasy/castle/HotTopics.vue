@@ -6,10 +6,8 @@
 
 <script>
 export default {
-  name: 'hotTopics', 
-  data() {
-    
-  }
+  name: 'hotTopics',
+  data () {}
 }
 </script>
 

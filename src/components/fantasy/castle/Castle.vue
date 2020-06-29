@@ -15,8 +15,6 @@
 <script>
 import TopSide from '../../common/TopSide'
 import TopMid from '../../common/TopMid'
-import Left from './Left'
-import Right from './Right'
 import ClusteringOfTopics from './ClusteringOfTopics'
 import HotTopics from './HotTopics'
 import WordCloud from './WordCloud'
@@ -36,7 +34,7 @@ export default {
     ClusteringOfTopics,
     HotTopics,
     WordCloud,
-    WebsiteList,
+    WebsiteList
   }
 }
 </script>
