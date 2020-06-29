@@ -6,6 +6,9 @@ import router from './router'
 import './assets/css/reset.css'
 import './assets/css/common.css'
 import zoom from './assets/scripts/tool/zoom'
+import VueParticles from 'vue-particles'  
+Vue.use(VueParticles) 
+
 zoom()
 window.addEventListener('resize', zoom)
 Vue.config.productionTip = false
