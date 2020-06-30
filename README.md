@@ -27,6 +27,8 @@ cd Analysis-of-2019-nCoV-News
 cnpm install
 cnpm install echarts
 cnpm install echarts-wordcloud
+cnpm install vue-particles --save-dev
+npm i element-ui -S
 npm run dev
 ```
 然后在浏览器里输入：http:localhost:8080 即可访问

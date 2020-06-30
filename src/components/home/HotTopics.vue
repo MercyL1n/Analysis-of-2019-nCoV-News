@@ -1,12 +1,14 @@
 <template>
     <div class="hotTopics">
       <h2 class="chart-title">疫情热度</h2>
+      <el-scrollbar style:"height:100%">
       <div class="hotLabel">
         <el-table
         :data="tableData"
-        :row-style="{height:'100px'}"
-        height="650"
+        height="690"
         style="width: 100%"
+        :header-row-style="{height:'100px'}"
+        :row-style="{height:'100px'}"
         header-row-class-name="tableHeader"
         row-class-name="tableRow">
         <el-table-column
@@ -40,6 +42,7 @@
         </el-table-column>
       </el-table>
       </div>
+      </el-scrollbar>
     </div>
   </template>
 
@@ -107,18 +110,17 @@
     top: 55%;
     left: 170px;
     width: 1050px;
-    height: 1000px;
+    height: 1200px;
     background: url(../../assets/images/common/tip-title-bg.png) no-repeat top left;
   }
   .hotLabel {
     width: 100%;
     margin-top: 80px;
-    height: 100%;
+    height: 1000px;
   }
   .tableHeader{
     font-size:25px;
     color:white;
-    background-color:rgba(240, 248, 255, 0.7)
   }
   .tableRow{
     font-size:25px;
@@ -133,6 +135,20 @@
 
   .el-table th, .el-table tr {
     background-color: transparent;
+  }  
+  .el-table__body-wrapper::-webkit-scrollbar{
+    /*width: 0;宽度为0隐藏*/
+    width: 0px;
   }
-
+  .el-table__body-wrapper::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    height: 50px;
+    background: #eee;
+  }
+  .el-table__body-wrapper::-webkit-scrollbar-track{
+    overflow-y: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background: rgba(0,0,0,0.4);
+  }
 </style>

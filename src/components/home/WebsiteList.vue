@@ -5,20 +5,21 @@
       <el-table
         :data="list"
         style="width: 100%"
-        height="650"
+        height="690"
+        :header-row-style="{height:'100px'}"
         :row-style="{height:'100px'}"
         header-row-class-name="tableHeader"
         row-class-name="tableRow">
         <el-table-column
           prop="name"
           label="名称"
-          width="350"
+          width="300"
           align="center">
         </el-table-column>
         <el-table-column
           prop="url"
           label="链接"
-          width="700"
+          width="600"
           align="center">
           <template slot-scope="scope">
             <a :href="scope.row.url"
@@ -26,6 +27,7 @@
               class="urlText">{{scope.row.url}}</a>
           </template>
         </el-table-column>
+        
       </el-table>
     </div>
     </div>
@@ -72,9 +74,10 @@ export default {
   .tableHeader{
     font-size:25px;
     color:white;
-    background-color:rgba(240, 248, 255, 0.7)
   }
   .tableRow{
+    height: 70px;
+    margin:0;
     font-size:25px;
     color:wheat;
   }
