@@ -13,13 +13,13 @@
         <el-table-column
           prop="name"
           label="名称"
-          width="300"
+          width="350"
           align="center">
         </el-table-column>
         <el-table-column
           prop="url"
           label="链接"
-          width="600"
+          width="700"
           align="center">
           <template slot-scope="scope">
             <a :href="scope.row.url"
