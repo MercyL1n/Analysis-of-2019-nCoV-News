@@ -13,7 +13,7 @@ export default {
   name: 'clusteringOfTopics',
   data () {
     return {
-      pic_url: "/api"+api.clusteringOfTopics
+      pic_url: api.clusteringOfTopics
     }
   },
 }

@@ -1,108 +1,171 @@
 <template>
-    <div class="hotTopics">
-      <h2 class="chart-title">疫情热度</h2>
-      <el-scrollbar style="height:100%">
-      <div class="hotLabel">
-        <el-table
-        :data="tableData"
-        height="690"
-        style="width: 100%"
-        :header-row-style="{height:'100px'}"
-        :row-style="{height:'100px'}"
-        header-row-class-name="tableHeader"
-        row-class-name="tableRow">
-        <el-table-column
-          type="index"
-          width="80"
-          align="center">
-        </el-table-column>
-        <el-table-column
-          prop="keyword"
-          label="关键词"
-          width="300"
-          align="center">
-        </el-table-column>
-        <el-table-column
-          prop="url"
-          label="链接"
-          width="450"
-          align="center">
-          <template slot-scope="scope">
-              <a :href="scope.row.url"
-                target="_blank"
-                class="urlText">{{scope.row.url}}</a>
-            </template>
-        </el-table-column>
-        <el-table-column
-          prop="hot"
-          label="热度"
-          width="200"
-          align="center"
-          color="yellow">
-        </el-table-column>
-      </el-table>
-      </div>
-      </el-scrollbar>
+  <div class="hotTopics">
+    <h2 class="chart-title">疫情热度</h2>
+    <el-scrollbar style="height:100%">
+    <div class="hotLabel">
+      <el-table
+      :data="tableData"
+      height="690"
+      style="width: 100%"
+      :header-row-style="{height:'100px'}"
+      :row-style="{height:'100px'}"
+      header-row-class-name="tableHeader"
+      row-class-name="tableRow">
+      <el-table-column
+        type="index"
+        width="80"
+        align="center">
+      </el-table-column>
+      <el-table-column
+        prop="keyword"
+        label="关键词"
+        width="300"
+        align="center">
+      </el-table-column>
+      <el-table-column
+        prop="url"
+        label="链接"
+        width="450"
+        align="center">
+        <template slot-scope="scope">
+            <a :href="scope.row.url"
+              target="_blank"
+              class="urlText">{{scope.row.url}}</a>
+          </template>
+      </el-table-column>
+      <el-table-column
+        prop="hot_spot_degree"
+        label="热度"
+        width="200"
+        align="center"
+        color="yellow">
+      </el-table-column>
+    </el-table>
     </div>
-  </template>
+    </el-scrollbar>
+  </div>
+</template>
 
-  <script>
-    export default {
-      data() {
-      return {
-        tableData: [{
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-         keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'http://www.xinhuanet.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }, {
-          keyword: '新冠',
-          url: 'https://sohu.com',
-          hot: '1518'
-        }]
-      }
+<script>
+import axios from 'axios'
+import api from '../../assets/scripts/tool/api'
+export default {
+  data () {
+    return {
+      tableData: null
     }
-    }
-  </script>
+  },
+  mounted () { 
+    var that = this
+    axios.get(api.websiteList)
+      .then(function (response) {
+      console.log(response.data);
+      // that.tableData = response.data
+      that.tableData = [{
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'http://www.xinhuanet.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }]
+    })
+    .catch(error => {
+      console.error(error)
+      that.tableData = [{
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'http://www.xinhuanet.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }, {
+        keyword: '新冠',
+        url: 'https://sohu.com',
+        hot_spot_degree: '1518'
+      }]
+    })
+  },
+  }
+</script>
 
 <style>
   .hotTopics {

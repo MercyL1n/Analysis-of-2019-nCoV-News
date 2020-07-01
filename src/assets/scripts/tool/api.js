@@ -6,9 +6,11 @@
  * @Description: API地址配置
  */
 // const onlineApiHost = 'http://122.51.141.127:8888/'
-// const onlineWsHost = isOnline ? 'ws:/88.888.88.888:8888/' : 'http://funlee.com/'
+// var isOnline = false
+// const onlineWsHost = isOnline ? 'http://122.51.141.127:8888/' : '/api/'
 export default {
-  websiteList: 'websites/list',
-  wordCloud: 'res/wordcloud',
-  clusteringOfTopics: 'res/cluster'
+  websiteList: '/api/websites/list',
+  wordCloud: '/api/res/wordcloud',
+  clusteringOfTopics: '/api/res/cluster',
+  hotTopics : '/api/statresult/list'
 }
