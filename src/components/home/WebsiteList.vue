@@ -1,7 +1,7 @@
 <template>
     <div class="websiteList">
       <h2 class="chart-title">网站列表
-        <el-button  style="margin-left: 665px;fixed:right" size="large" type="success"  @click="add">增加</el-button>
+        <el-button  style="margin-left: 655px;fixed:right; font-size: 23px" size="large" type="success"  @click="add" >增加</el-button>
       </h2>
     <div class="websiteLabel">
       <el-table
@@ -32,14 +32,14 @@
         </el-table-column>
         <el-table-column label="操作" width="150" align="center">
           <template slot-scope="scope">
-            <el-button type="danger" size="large" @click="remove(scope.$index, scope.row)">删除</el-button>
+            <el-button type="danger" size="large" @click="remove(scope.$index, scope.row)" style="font-size: 23px">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
     </div>
     <!--弹窗-->
-    <el-dialog :title="dialogTitle" width="50%" :visible.sync="iconFormVisible">
-      <el-form :inline="true" :model="input" class="demo-form-inline">
+    <el-dialog :title="dialogTitle" width="30%" height="20%" :visible.sync="iconFormVisible" >
+      <el-form :inline="true" :model="input" class="demo-form-inline" >
         <el-form-item label="名称">
           <el-input v-model="input.name" placeholder="名称"></el-input>
         </el-form-item>
@@ -47,7 +47,7 @@
           <el-input v-model="input.url" placeholder="链接"></el-input>
         </el-form-item>
       </el-form>
-      <div slot="footer" class="dialog-footer">
+      <div slot="footer" class="dialog-footer" >
         <el-button @click="iconFormVisible = false">取 消</el-button>
         <el-button type="primary" @click="submitUser()">确 定</el-button>
       </div>
@@ -143,4 +143,27 @@ export default {
   .el-table th, .el-table tr {
     background-color: transparent!important;
   }
+  .el-dialog__title {
+    font-size: 30px;
+  }
+  .el-form-item__label {
+     font-size: 25px;
+  }
+  .el-form-item__content {
+     font-size: 25px;
+  }
+  .el-input__inner {
+     font-size: 23px;
+  }
+  .el-message-box__title {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1;
+    color: #303133;
+}
+.el-message-box__container {
+    position: relative;
+    font-size: 25px;
+}
 </style>
