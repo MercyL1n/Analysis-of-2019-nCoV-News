@@ -73,8 +73,8 @@ export default {
   mounted () { 
     var that = this
     axios.get(api.websiteList)
-    .then(function (response) {
-      console.log(response);
+      .then(function (response) {
+      // console.log(response.data);
       that.list = response.data
     })
     .catch(error => {

@@ -9,6 +9,6 @@
 // const onlineWsHost = isOnline ? 'ws:/88.888.88.888:8888/' : 'http://funlee.com/'
 export default {
   websiteList: 'websites/list',
-  wordCloud: 'wordCloud',
-  clusteringOfTopics: 'clusteringOfTopics'
+  wordCloud: 'res/wordcloud',
+  clusteringOfTopics: 'res/cluster'
 }

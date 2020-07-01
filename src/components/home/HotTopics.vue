@@ -1,7 +1,7 @@
 <template>
     <div class="hotTopics">
       <h2 class="chart-title">疫情热度</h2>
-      <el-scrollbar style:"height:100%">
+      <el-scrollbar style="height:100%">
       <div class="hotLabel">
         <el-table
         :data="tableData"
