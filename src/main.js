@@ -10,6 +10,10 @@ import VueParticles from 'vue-particles'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueResource from 'vue-resource'
+import axios from 'axios'
+axios.defaults.baseURL = '/api'
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
 Vue.use(VueResource);
 Vue.use(ElementUI);
 Vue.use(VueParticles) 

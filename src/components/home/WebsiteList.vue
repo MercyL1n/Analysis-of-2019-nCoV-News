@@ -27,7 +27,7 @@
           <template slot-scope="scope">
             <a :href="scope.row.url"
               target="_blank"
-              class="urlText">{{scope.row.url}}</a>
+              class="urlText">{{scope.row.start_url}}</a>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150" align="center">
@@ -44,7 +44,7 @@
           <el-input v-model="input.name" placeholder="名称"></el-input>
         </el-form-item>
         <el-form-item label="链接">
-          <el-input v-model="input.url" placeholder="链接"></el-input>
+          <el-input v-model="input.start_url" placeholder="链接"></el-input>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer" >
@@ -56,6 +56,9 @@
 </template>
 
 <script>
+import axios from 'axios'
+import api from '../../assets/scripts/tool/api'
+
 export default {
   data () {
     return {
@@ -63,38 +66,50 @@ export default {
       input: {},
       dialogTitle: '增加',
       rowIndex: null,
-      list: [
-        {name: '网易新闻', url: 'https://news.163.com/'},
-        {name: '新浪新闻', url: 'https://news.sina.com.cn/'},
-        {name: '环球网', url: 'https://www.huanqiu.com/'},
-        {name: '新华网', url: 'http://www.xinhuanet.com/'},
-        {name: '凤凰网', url: 'http://www.ifeng.com/'},
-        {name: '网易新闻', url: 'https://news.163.com/'},
-        {name: '新浪新闻', url: 'https://news.sina.com.cn/'},
-        {name: '环球网', url: 'https://www.huanqiu.com/'},
-        {name: '新华网', url: 'http://www.xinhuanet.com/'},
-        {name: '凤凰网', url: 'http://www.ifeng.com/'},
-        {name: '环球网', url: 'https://www.huanqiu.com/'},
-        {name: '新华网', url: 'http://www.xinhuanet.com/'},
-        {name: '凤凰网', url: 'http://www.ifeng.com/'}
-      ],
+      list: null
     }
   },created() {
   },
+  mounted () { 
+    var that = this
+    axios.get(api.websiteList)
+    .then(function (response) {
+      console.log(response);
+      that.list = response.data
+    })
+    .catch(error => {
+      console.error(error)
+      that.list = [
+      {uid: 1, name: '网易新闻', start_url: 'https://news.163.com/'},
+      {uid: 1, name: '新浪新闻', start_url: 'https://news.sina.com.cn/'},
+      {uid: 1, name: '环球网', start_url: 'https://www.huanqiu.com/'},
+      {uid: 1, name: '新华网', start_url: 'http://www.xinhuanet.com/'},
+      {uid: 1, name: '凤凰网', start_url: 'http://www.ifeng.com/'},
+      {uid: 1, name: '网易新闻', start_url: 'https://news.163.com/'},
+      {uid: 1, name: '新浪新闻', start_url: 'https://news.sina.com.cn/'},
+      {uid: 1, name: '环球网', start_url: 'https://www.huanqiu.com/'},
+      {uid: 1, name: '新华网', start_url: 'http://www.xinhuanet.com/'},
+      {uid: 1, name: '凤凰网', start_url: 'http://www.ifeng.com/'},
+      {uid: 1, name: '环球网', start_url: 'https://www.huanqiu.com/'},
+      {uid: 1, name: '新华网', start_url: 'http://www.xinhuanet.com/'},
+      {uid: 1, name: '凤凰网', start_url: 'http://www.ifeng.com/'}
+      ]
+    })
+  },
   methods: {
     // 增加
-    add() {
+    add () {
       this.dialogTitle = '增加';
       this.input = {};
       this.iconFormVisible = true;
     },
     // 弹窗确定
-    submitUser() {
+    submitUser () {
       this.list.splice(0, 0, this.input);
       this.iconFormVisible = false;
     },
     // 删除
-    remove(index, row) {
+    remove (index, row) {
       this.$confirm(`确定删除${row.name}吗?`, '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
