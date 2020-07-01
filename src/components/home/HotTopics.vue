@@ -64,71 +64,11 @@ export default {
   },
   mounted () { 
     var that = this
-    axios.get(api.websiteList)
+    axios.get(api.hotTopics)
       .then(function (response) {
       console.log(response.data);
       // that.tableData = response.data
-      that.tableData = [{
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'http://www.xinhuanet.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }, {
-        keyword: '新冠',
-        url: 'https://sohu.com',
-        hot_spot_degree: '1518',
-        confidence:'80%'
-      }]
+     that.tableData = response.data
     })
     .catch(error => {
       console.error(error)

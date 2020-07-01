@@ -160,26 +160,26 @@ export default {
     background-color: transparent!important;
   }
   .el-dialog__title {
-    font-size: 30px;
+    font-size: 30px!important;
   }
   .el-form-item__label {
-     font-size: 25px;
+     font-size: 25px!important;
   }
   .el-form-item__content {
-     font-size: 25px;
+     font-size: 25px!important;
   }
   .el-input__inner {
-     font-size: 23px;
+     font-size: 23px!important;
   }
   .el-message-box__title {
     padding-left: 0;
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 30px!important;
     line-height: 1;
     color: #303133;
 }
 .el-message-box__container {
     position: relative;
-    font-size: 25px;
+    font-size: 25px!important;
 }
 </style>
