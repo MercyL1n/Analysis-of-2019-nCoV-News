@@ -23,7 +23,8 @@
           prop="url"
           label="链接"
           width="600"
-          align="center">
+          align="center"
+          show-overflow-tooltip="true">
           <template slot-scope="scope">
             <a :href="scope.row.url"
               target="_blank"

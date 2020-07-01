@@ -19,14 +19,15 @@
       <el-table-column
         prop="keyword"
         label="关键词"
-        width="300"
+        width="200"
         align="center">
       </el-table-column>
       <el-table-column
         prop="url"
         label="链接"
-        width="450"
-        align="center">
+        width="500"
+        align="center"
+        show-overflow-tooltip="true">
         <template slot-scope="scope">
             <a :href="scope.row.url"
               target="_blank"
@@ -36,9 +37,15 @@
       <el-table-column
         prop="hot_spot_degree"
         label="热度"
-        width="200"
+        width="130"
         align="center"
         color="yellow">
+      </el-table-column>
+      <el-table-column
+        prop="confidence"
+        label="可信度"
+        width="130"
+        align="center">
       </el-table-column>
     </el-table>
     </div>
@@ -64,51 +71,63 @@ export default {
       that.tableData = [{
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'http://www.xinhuanet.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }]
     })
     .catch(error => {
@@ -116,51 +135,63 @@ export default {
       that.tableData = [{
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'http://www.xinhuanet.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }, {
         keyword: '新冠',
         url: 'https://sohu.com',
-        hot_spot_degree: '1518'
+        hot_spot_degree: '1518',
+        confidence:'80%'
       }]
     })
   },
