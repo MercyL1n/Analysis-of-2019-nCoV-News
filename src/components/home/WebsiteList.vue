@@ -128,7 +128,6 @@ export default {
         cancelButtonText: '取消',
         type: 'error',
       }).then(() => {
-        this.list.splice(index, 1);
         // console.log(api.deleteWebsite + Base64.encode(this.list[index].start_url) + "/" + this.list[index].name)
         axios.get(api.deleteWebsite + Base64.encode(this.list[index].start_url) + "/" + this.list[index].name)
         .then(function (response) {
@@ -137,6 +136,7 @@ export default {
         .catch(error => {
         console.error(error)
         })
+        this.list.splice(index, 1);
       });
     },
   }
