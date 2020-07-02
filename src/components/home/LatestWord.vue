@@ -1,12 +1,12 @@
 <template>
     <div class="latestWord">
         <div class="hdrightboxtop"><h2 class="chart-title-mid" align="center">疫情速报</h2>
-            <div class="left2_table">
+            <div class="left2_table" >
                <ul>
                     <li v-for="(item, $index) in list" :key="item.uid" :class="$index %2 == 0 ? null: 'bg'">
-                    <p class="fl"><a :href="item.url" class="url" target="_blank">{{item.title}}</a><br>
+                    <p class="fl"><a :href="item.url" class="url" target="_blank" >{{item.title}}</a><br>
                     {{item.publish_time}}<br>
-                    {{item.content}}             
+                    <span>{{item.content|ellipsis}}</span>             
                     </p>
                     </li>
                </ul>
@@ -51,7 +51,16 @@ export default {
         }
       ]
     })
-  },
+  }, 
+  filters: {
+            ellipsis (value) {
+                if (!value) return ''
+                if (value.length > 36) {
+                    return value.slice(0,36) + '...'
+                }
+                return value
+            }
+         }
 }
 </script>
 
@@ -108,6 +117,7 @@ export default {
     width: 97%;
     overflow: hidden;
     font-size: 30px;
+    margin-top: 2%;
   }
   .left2_table li p.fr{
     position: absolute;
@@ -119,4 +129,5 @@ export default {
   .left2_table li.bg { 
     background: rgba(0, 179, 255, 0.4) url(../../assets/images/common/icosjx.png) no-repeat  top left;
   }
+
 </style>
