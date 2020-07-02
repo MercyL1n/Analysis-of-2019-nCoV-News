@@ -12,7 +12,7 @@ export default {
   websiteList: onlineWsHost+'websites/list',
   wordCloud: onlineWsHost+'res/wordcloud',
   clusteringOfTopics: onlineWsHost+'res/cluster',
-  hotTopics: onlineWsHost+'statresult/list',
+  hotTopics: onlineWsHost+'statresult/list/20',
   lastedwords: onlineWsHost + "textstorage/top/10",
   addWebsite: onlineWsHost + "webreq/add/",
   deleteWebsite: onlineWsHost + "webreq/delete/"

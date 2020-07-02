@@ -6,7 +6,7 @@
     <div class="websiteLabel">
       <el-table
         :data="list"
-        style="width: 100%"
+        style="width: 100%; font-size: 40px!important"
         width="1300"
         height="690"
         :header-row-style="{height:'100px'}"
@@ -152,6 +152,10 @@ export default {
     height:1000px;
     background: url(../../assets/images/common/tip-title-bg.png) no-repeat top left;
   }
+  .el-table__row {
+    height: 100px;
+    font-size: 40px!important;
+  }
   .websiteLabel {
     margin-top: 90px;
     height: 50%;
@@ -198,14 +202,24 @@ export default {
     line-height: 1;
     color: #303133;
 }
-.el-message-box__container {
-    position: relative;
-    font-size: 25px!important;
-}
-.table-content{
-    white-space:nowrap; 
-    overflow:hidden; 
-    text-overflow:ellipsis;
-  /*强制不换行，超出部分隐藏且以省略号形式出现*/
+  .el-message-box__container {
+      position: relative;
+      font-size: 25px!important;
+  }
+  .table-content{
+      white-space:nowrap; 
+      overflow:hidden; 
+      text-overflow:ellipsis;
+    /*强制不换行，超出部分隐藏且以省略号形式出现*/
+  }
+  .el-table .cell {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
+    line-height: initial;
+    padding-right: 10px;
 }
 </style>

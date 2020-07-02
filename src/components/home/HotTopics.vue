@@ -13,23 +13,23 @@
       row-class-name="tableRow">
       <el-table-column
         type="index"
-        width="80"
+        width="60px"
         align="center">
       </el-table-column>
       <el-table-column
         prop="keyword"
         label="关键词"
-        width="200"
+        width="150px"
         align="center">
       </el-table-column>
       <el-table-column
         prop="url"
         label="链接"
-        width="500"
+        width="500px"
         align="center"
         >
         <template slot-scope="scope">
-            <span class="table-content" >
+          <span class="table-content" >
             <a :href="scope.row.url"
               target="_blank"
               class="urlText">{{scope.row.url}}</a>
@@ -39,15 +39,16 @@
       <el-table-column
         prop="hot_spot_degree"
         label="热度"
-        width="130"
+        width="130px"
         align="center"
         color="yellow">
       </el-table-column>
       <el-table-column
         prop="confidence"
         label="可信度"
-        width="130"
-        align="center">
+        width="200px"
+        align="center"
+      >
       </el-table-column>
     </el-table>
     </div>
@@ -64,7 +65,7 @@ export default {
       tableData: null
     }
   },
-  mounted () { 
+  mounted () {
     var that = this
     axios.get(api.hotTopics)
       .then(function (response) {
@@ -191,6 +192,6 @@ export default {
     white-space:nowrap; 
     overflow:hidden; 
     text-overflow:ellipsis;
- /*强制不换行，超出部分隐藏且以省略号形式出现*/
-}
+  /*强制不换行，超出部分隐藏且以省略号形式出现*/
+  }
 </style>
