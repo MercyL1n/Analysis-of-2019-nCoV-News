@@ -24,11 +24,13 @@
           label="链接"
           width="600"
           align="center"
-          show-overflow-tooltip="true">
+          >
           <template slot-scope="scope">
+            <span class="table-content" >
             <a :href="'https://'+scope.row.start_url"
               target="_blank"
               class="urlText">{{scope.row.start_url}}</a>
+            </span>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150" align="center">
@@ -199,5 +201,11 @@ export default {
 .el-message-box__container {
     position: relative;
     font-size: 25px!important;
+}
+.table-content{
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+  /*强制不换行，超出部分隐藏且以省略号形式出现*/
 }
 </style>

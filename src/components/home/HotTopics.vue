@@ -27,11 +27,13 @@
         label="链接"
         width="500"
         align="center"
-        show-overflow-tooltip="true">
+        >
         <template slot-scope="scope">
+            <span class="table-content" >
             <a :href="scope.row.url"
               target="_blank"
               class="urlText">{{scope.row.url}}</a>
+            </span>
           </template>
       </el-table-column>
       <el-table-column
@@ -185,4 +187,10 @@ export default {
     border-radius: 2px;
     background: rgba(0,0,0,0.4);
   }
+  .table-content{
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+ /*强制不换行，超出部分隐藏且以省略号形式出现*/
+}
 </style>
