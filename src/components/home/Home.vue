@@ -24,6 +24,7 @@
       <clusteringOfTopics></clusteringOfTopics>
       <hotTopics></hotTopics>
     </div>
+    <lastedWord></lastedWord>
     <div class="right">
       <wordCloud></wordCloud>
       <websiteList></websiteList>
@@ -37,6 +38,7 @@ import ClusteringOfTopics from './ClusteringOfTopics'
 import HotTopics from './HotTopics'
 import WordCloud from './WordCloud'
 import WebsiteList from './WebsiteList'
+import LastedWord from './LatestWord'
 
 export default {
   name: 'Home',
@@ -52,7 +54,8 @@ export default {
     ClusteringOfTopics,
     HotTopics,
     WordCloud,
-    WebsiteList
+    WebsiteList,
+    LastedWord
   }
 }
 </script>

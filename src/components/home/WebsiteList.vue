@@ -26,7 +26,7 @@
           align="center"
           show-overflow-tooltip="true">
           <template slot-scope="scope">
-            <a :href="scope.row.url"
+            <a :href="'https://'+scope.row.start_url"
               target="_blank"
               class="urlText">{{scope.row.start_url}}</a>
           </template>
@@ -100,7 +100,7 @@ export default {
   methods: {
     // 增加
     add () {
-      this.dialogTitle = '增加';
+      this.dialogTitle = '请求网站管理员增加站点';
       this.input = {};
       this.iconFormVisible = true;
     },
@@ -108,10 +108,11 @@ export default {
     submitUser () {
       this.list.splice(0, 0, this.input);
       this.iconFormVisible = false;
+      
     },
     // 删除
     remove (index, row) {
-      this.$confirm(`确定删除${row.name}吗?`, '提示', {
+      this.$confirm(`确定请求网站管理员删除${row.name}吗?`, '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'error',

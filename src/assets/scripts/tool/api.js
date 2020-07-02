@@ -12,5 +12,6 @@ export default {
   websiteList: onlineWsHost+'websites/list',
   wordCloud: onlineWsHost+'res/wordcloud',
   clusteringOfTopics: onlineWsHost+'res/cluster',
-  hotTopics : onlineWsHost+'statresult/list'
+  hotTopics: onlineWsHost+'statresult/list',
+  lastedwords: onlineWsHost + "textstorage/top/10"
 }
