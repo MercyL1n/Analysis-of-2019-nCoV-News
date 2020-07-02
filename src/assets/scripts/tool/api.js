@@ -6,11 +6,11 @@
  * @Description: API地址配置
  */
 // const onlineApiHost = 'http://122.51.141.127:8888/'
-// var isOnline = false
-// const onlineWsHost = isOnline ? 'http://122.51.141.127:8888/' : '/api/'
+var isOnline = false
+const onlineWsHost = isOnline ? 'http://122.51.141.127:8888/' : '/api/'
 export default {
-  websiteList: '/api/websites/list',
-  wordCloud: '/api/res/wordcloud',
-  clusteringOfTopics: '/api/res/cluster',
-  hotTopics : '/api/statresult/list'
+  websiteList: onlineWsHost+'websites/list',
+  wordCloud: onlineWsHost+'res/wordcloud',
+  clusteringOfTopics: onlineWsHost+'res/cluster',
+  hotTopics : onlineWsHost+'statresult/list'
 }

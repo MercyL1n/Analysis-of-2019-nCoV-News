@@ -28,8 +28,11 @@ cnpm install
 cnpm install echarts
 cnpm install echarts-wordcloud
 cnpm install vue-particles --save-dev
-npm i element-ui -S
+cnpm i element-ui -S
 npm run dev
+# 部署
+npm run build
+# 在项目根目录下生成dist目录，将其复制到网页根目录下
 ```
 然后在浏览器里输入：http:localhost:8080 即可访问
 
