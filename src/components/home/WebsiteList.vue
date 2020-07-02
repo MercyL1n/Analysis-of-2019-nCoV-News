@@ -219,7 +219,7 @@ export default {
     text-overflow: ellipsis;
     white-space: normal;
     word-break: break-all;
-    line-height: initial;
+    line-height: initial!important;
     padding-right: 10px;
 }
 </style>
