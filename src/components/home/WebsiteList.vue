@@ -59,6 +59,7 @@
 <script>
 import axios from 'axios'
 import api from '../../assets/scripts/tool/api'
+const Base64 = require('js-base64').Base64
 
 export default {
   data () {
@@ -107,8 +108,16 @@ export default {
     // 弹窗确定
     submitUser () {
       this.list.splice(0, 0, this.input);
+      this.input.name
+      // console.log(api.addWebsite + Base64.encode(this.input.start_url) + "/" + this.input.name)
+      axios.get(api.addWebsite + Base64.encode(this.input.start_url) + "/" + this.input.name)
+      .then(function (response) {
+        console.log(response.data)
+      })
+      .catch(error => {
+      console.error(error)
+      })
       this.iconFormVisible = false;
-      
     },
     // 删除
     remove (index, row) {
@@ -118,6 +127,14 @@ export default {
         type: 'error',
       }).then(() => {
         this.list.splice(index, 1);
+        // console.log(api.deleteWebsite + Base64.encode(this.list[index].start_url) + "/" + this.list[index].name)
+        axios.get(api.deleteWebsite + Base64.encode(this.list[index].start_url) + "/" + this.list[index].name)
+        .then(function (response) {
+          console.log(response.data)
+        })
+        .catch(error => {
+        console.error(error)
+        })
       });
     },
   }

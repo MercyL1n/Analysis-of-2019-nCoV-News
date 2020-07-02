@@ -13,5 +13,7 @@ export default {
   wordCloud: onlineWsHost+'res/wordcloud',
   clusteringOfTopics: onlineWsHost+'res/cluster',
   hotTopics: onlineWsHost+'statresult/list',
-  lastedwords: onlineWsHost + "textstorage/top/10"
+  lastedwords: onlineWsHost + "textstorage/top/10",
+  addWebsite: onlineWsHost + "webreq/add/",
+  deleteWebsite: onlineWsHost + "webreq/delete/"
 }

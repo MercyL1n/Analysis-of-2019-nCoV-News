@@ -27,6 +27,7 @@ cd Analysis-of-2019-nCoV-News
 cnpm install
 cnpm install echarts
 cnpm install echarts-wordcloud
+cnpm install --save js-base64
 cnpm install vue-particles --save-dev
 cnpm i element-ui -S
 npm run dev
